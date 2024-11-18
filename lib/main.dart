@@ -16,9 +16,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text('MobX Flutter Example')),
         body: Center(
           child: Observer(
-            builder: (_) => Text(
-              'Count: ${counter.count}', // Reage automaticamente às mudanças
-              style: TextStyle(fontSize: 40),
+             builder: (_) => Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Count: ${counter.count}', //reage autometicamente á mudanças 
+                  style: TextStyle(fontSize: 40),
+                ),
+                Text(
+                  'Multiplied Count: ${counter.multipliedCount}', // Exibindo o valor computado
+                  style: TextStyle(fontSize: 20, color: Colors.blue),
+                ),
+              ],
             ),
           ),
         ),
